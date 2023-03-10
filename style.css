@@ -92,6 +92,8 @@ button {
 .sidebar{
 	background-color: #10171A;
     	width: 75px;
+	display: flex;
+	flex-direction: column;
 }
 
 .panel{
@@ -102,4 +104,66 @@ button {
 .main{
 	background-color: #EDF1F3;
     	flex: 1;
+}
+
+/* SIDEBAR ELEMENTS */
+
+.menu {
+	
+}
+
+.menu__button {
+	padding: 19px 0;
+	color: rgba(255, 255, 255, 0.4);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	transition: all 0.4s;
+	animation: fade-in 1.5s;
+}
+
+.menu__icon {
+	font-size: 18px;
+	margin-bottom: 3px;
+}
+
+.menu__text {
+	font-weight: 500;
+	font-size: 12px;
+}
+
+.menu__button--active {
+	background-color: #2B363B;
+	color: #fff;
+	position: relative;
+}
+
+.menu__button--active::before{
+	content: '';
+	width: 3px;
+	height: 100%;
+	background-color: #375BB6;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.menu__button:hover, .menu__button:focus {
+	background-color: #2B363B;
+	color: #fff;
+	cursor: pointer;
+}
+
+.footer {
+	margin-top: auto;
+	margin-bottom: 60px;
+	transform: rotate(-90deg);
+
+}
+
+.copyright {
+	color: rgba(255, 255, 255, 0.15);
+	font-size: 12px;
+	white-space: nowrap;
 }
